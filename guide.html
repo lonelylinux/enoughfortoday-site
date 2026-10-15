@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>User's Guide — Enough for Today</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #fafaf8;
+    --text: #1c1c1c;
+    --muted: #5a5a5a;
+    --accent: #185FA5;
+    --rule: #e2e2df;
+    --stub-bg: rgba(90, 90, 90, 0.06);
+    --draft-bg: rgba(200, 120, 20, 0.1);
+    --draft-text: #8a5a00;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181a;
+      --text: #eceeef;
+      --muted: #a3a8ac;
+      --accent: #7fb3e8;
+      --rule: #2c2f32;
+      --stub-bg: rgba(255, 255, 255, 0.05);
+      --draft-bg: rgba(255, 180, 80, 0.12);
+      --draft-text: #e0b36a;
+    }
+  }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 20px 100px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin-bottom: 4px;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+  .draft-notice {
+    background: var(--draft-bg);
+    color: var(--draft-text);
+    border-radius: 10px;
+    padding: 16px 20px;
+    font-size: 0.92rem;
+    margin-bottom: 36px;
+  }
+  .draft-notice strong { color: inherit; }
+  h2 {
+    font-size: 1.3rem;
+    margin-top: 48px;
+    margin-bottom: 12px;
+    border-top: 1px solid var(--rule);
+    padding-top: 32px;
+    scroll-margin-top: 16px;
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin-top: 28px;
+    margin-bottom: 8px;
+    scroll-margin-top: 16px;
+  }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); }
+  .home-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+  }
+  .toc {
+    background: rgba(24, 95, 165, 0.06);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 8px;
+  }
+  .toc h2 {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+  .toc ol, .toc ul {
+    margin: 0 0 4px;
+  }
+  .toc > ul { padding-left: 18px; }
+  .toc .part-label {
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 6px;
+  }
+  .toc .part-label:first-child { margin-top: 0; }
+  .stub {
+    background: var(--stub-bg);
+    border-left: 3px solid var(--rule);
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-style: italic;
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-bottom: 14px;
+  }
+  .stub .tag {
+    display: inline-block;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--draft-text);
+    background: var(--draft-bg);
+    border-radius: 4px;
+    padding: 2px 7px;
+    margin-bottom: 6px;
+  }
+  figure {
+    margin: 16px 0;
+    text-align: center;
+  }
+  figure img {
+    max-width: 280px;
+    width: 100%;
+    border-radius: 14px;
+    border: 1px solid var(--rule);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  }
+  figcaption {
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin-top: 8px;
+  }
+  .drafted {
+    border-left: 3px solid var(--accent);
+    padding-left: 16px;
+  }
+  .sample-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <a class="home-link" href="/">← Enough for Today</a>
+  <h1>User's Guide</h1>
+  <p class="subtitle">Enough for Today — a pacing app for the chronically ill and the chronically overworking</p>
+
+  <div class="draft-notice">
+    <strong>This is a working outline, not the finished guide.</strong> It's here so we can agree on
+    structure and tone before writing all of it out. Most sections below are placeholders — short
+    descriptions of what will go there, not the final text. Only <a href="#numbers">"How the Numbers
+    Work"</a> is drafted in full, as a style sample. Screenshots are still being selected; a few
+    real ones are wired in below to check that layout works.
+  </div>
+
+  <nav class="toc">
+    <h2>Contents</h2>
+    <div class="part-label">Part 1 — Tour</div>
+    <ul>
+      <li><a href="#numbers">How the Numbers Work</a> (primer)</li>
+      <li><a href="#tour-today">Today</a></li>
+      <li><a href="#tour-tasks">Tasks</a></li>
+      <li><a href="#tour-reports">Reports</a></li>
+      <li><a href="#tour-setup">Setup</a></li>
+    </ul>
+    <div class="part-label">Part 2 — How-To</div>
+    <ul>
+      <li><a href="#howto-checkin">Daily Check-In</a></li>
+      <li><a href="#howto-plan">Plan Your Day</a>
+        <ul>
+          <li><a href="#howto-plan-today">Today</a> — Editing Task Details</li>
+          <li><a href="#howto-plan-past">A Past Day</a></li>
+          <li><a href="#howto-plan-future">A Future Day</a></li>
+        </ul>
+      </li>
+      <li><a href="#howto-menu">Managing Your Task Menu</a></li>
+      <li><a href="#howto-intraday">Intraday Budgeting</a> — Deferring / Moving Tasks</li>
+      <li><a href="#howto-daymodes">Understanding Day Modes</a></li>
+      <li><a href="#howto-reports">Reading Your Reports</a></li>
+      <li><a href="#howto-setup">Setting Up Your App</a>
+        <ul>
+          <li><a href="#howto-setup-default">Default Day</a></li>
+          <li><a href="#howto-setup-modifiers">Day Modifiers</a></li>
+          <li><a href="#howto-setup-backup">Back-Up / Restore</a></li>
+        </ul>
+      </li>
+      <li><a href="#howto-tips">Tips &amp; Tricks</a>
+        <ul>
+          <li><a href="#tips-good-stuff">Good Stuff First</a></li>
+          <li><a href="#tips-mte">MTE (Make Tomorrow Easier)</a></li>
+          <li><a href="#howto-setup-default">Default Day</a> (see Setup)</li>
+          <li><a href="#tips-categories">Task Categories</a></li>
+          <li><a href="#tips-slack">Slack Time (React / Recreation)</a></li>
+          <li><a href="#tips-rest">Rest Day</a></li>
+        </ul>
+      </li>
+      <li><a href="#howto-privacy">Your Data &amp; Privacy</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============ PRIMER (drafted in full — style sample) ============ -->
+  <h2 id="numbers">How the Numbers Work</h2>
+  <span class="sample-tag">Drafted — style sample</span>
+  <div class="drafted">
+    <p>Everything in Enough for Today comes down to three pairs of numbers: <strong>Cost</strong>,
+    <strong>Payoff</strong>, and the <strong>Net</strong> between them — tracked separately across
+    three dimensions: <strong>Physical</strong>, <strong>Emotional</strong>, and
+    <strong>Cognitive</strong>.</p>
+
+    <p>Every task you log has a Cost (what it takes out of you) and a Payoff (what it gives back),
+    in each of those three dimensions. Net is just Payoff minus Cost — positive means the task
+    recharged you more than it drained you; negative means it cost more than it gave. A nap might
+    be Cost 0, Payoff 9 — pure recharge. A heavy work task might be Cost 8, Payoff 5 — necessary,
+    but a real draw on the tank.</p>
+
+    <p>Your morning check-in (Body Battery, sleep score, HRV, and a few others) determines your
+    <strong>Spendable Budget</strong> for the day — how much total Cost you can take on before
+    you're pushing past what your body actually has available. As you log tasks, the app tracks
+    Used, Payoff, and Remaining against that budget in real time, right on the Today screen.</p>
+
+    <p>You don't need to do this math yourself. The app does it live, every time you add, edit, or
+    remove a task. Your job is just to log honestly — the numbers take care of the rest.</p>
+  </div>
+
+  <!-- ============ PART 1: TOUR ============ -->
+
+  <h2 id="tour-today">Tour: Today</h2>
+  <div class="stub">
+    <span class="tag">Outline</span>
+    <p>Walk through the Today screen top to bottom: the status banner and what each Day Mode
+    (Normal / Back-off / Rest) means and what triggers it; the budget summary box; morning inputs
+    (Body Battery, sleep score, HR low, HRV) and how to edit them; today's modifiers; Default Day
+    and "Load default tasks"; the ledger of logged tasks and the task card actions (Edit details,
+    Remove, +1 Day); the Add Task button; and day-to-day navigation (prior/next day, jump via
+    calendar).</p>
+  </div>
+  <figure>
+    <img src="1_today_normal.png" alt="Today screen, normal day">
+    <figcaption>Today screen — Normal day, within budget</figcaption>
+  </figure>
+
+  <h2 id="tour-tasks">Tour: Tasks (the Menu)</h2>
+  <div class="stub">
+    <span class="tag">Outline</span>
+    <p>The Tasks tab is your reusable menu of activities (29 in the test data) — sortable by
+    Priority, Cost, Payoff, Net, or Name. Cover: what Priority (High/Medium/Low) means and does;
+    adding a task to today directly from the menu; editing a menu item's name, priority, and its
+    six cost/payoff numbers; deleting a menu item (and that this never touches already-logged
+    days).</p>
+  </div>
+
+  <h2 id="tour-reports">Tour: Reports</h2>
+  <div class="stub">
+    <span class="tag">Outline</span>
+    <p>Reports is one continuous scrolling page, not several tabs. In order: Budget adherence
+    (Last 7 days / Last 30 days / All time, bar chart color-coded green/amber/red/grey, rest-day
+    dots); Cost by dimension (stacked Physical/Emotional/Cognitive bars); Net trend (bars above/
+    below a zero line — trending toward recharge vs. depletion); Recovery inputs (Body Battery,
+    sleep score, HRV strips to visually line up against the charts above); Day Mode calendar
+    (month view, color legend); Menu insights (per-activity logged count and average cost/payoff/
+    net across history — this is where patterns about which tasks are actually worth it become
+    visible).</p>
+  </div>
+
+  <h2 id="tour-setup">Tour: Setup</h2>
+  <div class="stub">
+    <span class="tag">Outline</span>
+    <p>Setup is one long settings page, not separate screens. Cover: Scale & thresholds (scale
+    max, heavy threshold); Battery → budget (battery floor, default/back-off pacing %, today's
+    live spendable budget, battery back-off threshold, hard-rest floor, the HR/HRV/sleep signals
+    that trip Back-off day); Advanced, expandable (heavy-count ceilings per dimension, total cost
+    ceilings, the green recharge-marker ratio, premiums); Default Day (its own sub-page — link
+    out); Backup, restore & wipe (its own section — link out); Appearance (4 themes: Calm,
+    Monochrome, Color-safe, Bold); and the medical-advice disclaimer at the bottom.</p>
+  </div>
+
+  <!-- ============ PART 2: HOW-TO ============ -->
+
+  <h2 id="howto-checkin">Daily Check-In</h2>
+  <div class="stub"><span class="tag">Outline</span><p>The morning routine: what to enter, why each field matters, and what happens if you skip a day.</p></div>
+
+  <h2 id="howto-plan">Plan Your Day</h2>
+  <h3 id="howto-plan-today">Today</h3>
+  <div class="stub"><span class="tag">Outline</span><p>Adding tasks to today, and editing task details on an already-logged entry (this is the per-day snapshot, separate from the menu item it came from).</p></div>
+  <h3 id="howto-plan-past">A Past Day</h3>
+  <div class="stub"><span class="tag">Outline</span><p>Navigating to a past day, and — if a day was never checked in live — logging a missed check-in so it's reflected correctly in Reports.</p></div>
+  <h3 id="howto-plan-future">A Future Day</h3>
+  <div class="stub"><span class="tag">Outline</span><p>Planning ahead: today's live budget and Day Mode always reflect today, but a future day's ledger is real and saved, so you can stage tasks in advance.</p></div>
+
+  <h2 id="howto-menu">Managing Your Task Menu</h2>
+  <div class="stub"><span class="tag">Outline</span><p>Adding, editing, and deleting menu items — separate from logging a day's instance of one.</p></div>
+
+  <h2 id="howto-intraday">Intraday Budgeting</h2>
+  <div class="stub"><span class="tag">Outline</span><p>Adjusting as the day goes, including deferring or moving a task to another day with the +1 Day / −1 Day controls.</p></div>
+
+  <h2 id="howto-daymodes">Understanding Day Modes</h2>
+  <div class="stub"><span class="tag">Outline</span><p>Normal, Back-off, and Rest — what each means, what can trigger a Back-off day (Body Battery, sleep score, HR, HRV, a flagged overdo-it-yesterday), and how pacing % changes your budget in each mode.</p></div>
+
+  <h2 id="howto-reports">Reading Your Reports</h2>
+  <div class="stub"><span class="tag">Outline</span><p>How to actually use the Reports page — spotting patterns in budget adherence, which dimension is driving hard days, and which menu items are worth their cost over time via Menu insights.</p></div>
+
+  <h2 id="howto-setup">Setting Up Your App</h2>
+  <h3 id="howto-setup-default">Default Day</h3>
+  <div class="stub"><span class="tag">Outline</span><p>What it is, how "Load default tasks" works, and that it's a live template — editing a menu item's numbers updates it everywhere, including here.</p></div>
+  <h3 id="howto-setup-modifiers">Day Modifiers</h3>
+  <div class="stub"><span class="tag">Outline</span><p>Preset and custom modifiers (Wildfire smoke, Heat/no AC, Poor sleep, Illness flare, Noise/sensory overload) and how they discount today's budget.</p></div>
+  <h3 id="howto-setup-backup">Back-Up / Restore</h3>
+  <div class="stub"><span class="tag">Outline</span><p>The three independent categories (Setup, Tasks menu, Days), what backup/restore/wipe do in each, and that everything lives in a plain file you control.</p></div>
+  <figure>
+    <img src="4_setup_backup_restore.png" alt="Backup, restore and wipe screen">
+    <figcaption>Backup, restore &amp; wipe — three independent categories</figcaption>
+  </figure>
+
+  <h2 id="howto-tips">Tips &amp; Tricks</h2>
+  <h3 id="tips-good-stuff">Good Stuff First</h3>
+  <div class="stub"><span class="tag">Outline</span><p>Logging the good stuff (naps, self-care, recharge) isn't optional bookkeeping — it's how the budget math knows what's actually working for you.</p></div>
+  <h3 id="tips-mte">MTE (Make Tomorrow Easier)</h3>
+  <div class="stub"><span class="tag">Outline</span><p>One small thing a day that moves the system forward instead of just reacting to it — especially hard, and especially valuable, for solopreneurs, workaholics, and the chronically ill alike.</p></div>
+  <h3 id="tips-categories">Task Categories</h3>
+  <div class="stub"><span class="tag">Outline</span><p>How Priority and the three dimensions work together when deciding what a task actually is.</p></div>
+  <h3 id="tips-slack">Slack Time (React / Recreation)</h3>
+  <div class="stub"><span class="tag">Outline — notes below for drafting</span>
+    <p>Unplanned demands don't ask permission — if nothing's budgeted for them, they get paid for
+    by borrowing against whatever was planned. Scheduling the interruption in advance, as a real
+    task with a real Cost, is what keeps it from cannibalizing the rest of the day. The twist: this
+    isn't a line that just empties. <strong>React / Recreation</strong> is a real entry in your own
+    Default Day, Cost 9 / Payoff 9 / Net +0 — it holds that battery space on purpose. If something
+    unplanned shows up, you edit the day's copy of it and the notes field to reflect what actually
+    happened. If nothing does, it's recreation time you'd never have scheduled on purpose. Either
+    way, nothing gets silently borrowed from the rest of the day.</p>
+  </div>
+  <figure>
+    <img src="4_setup_default_day.png" alt="Default Day list showing React / Recreation and MTE entries">
+    <figcaption>React / Recreation and MTE, as they actually appear in Default Day — Net +0 by design</figcaption>
+  </figure>
+  <h3 id="tips-rest">Rest Day</h3>
+  <div class="stub"><span class="tag">Outline</span><p>Declaring a full rest day, and how it's marked in Reports after the fact.</p></div>
+
+  <h2 id="howto-privacy">Your Data &amp; Privacy</h2>
+  <div class="stub"><span class="tag">Outline</span><p>Short note: no account, nothing leaves your device, your backup is the only copy. Full detail lives in the <a href="/privacy.html">Privacy Policy</a>.</p></div>
+
+  <footer>Enough for Today — draft outline, not yet published to the main site</footer>
+</main>
+</body>
+</html>
