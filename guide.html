@@ -141,6 +141,22 @@
     border: 1px solid var(--rule);
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
   }
+  .strip-sequence {
+    margin: 16px 0;
+  }
+  .strip-sequence figure {
+    margin: 0 0 6px;
+  }
+  .strip-sequence img {
+    max-width: 420px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--rule);
+  }
+  .strip-sequence figcaption {
+    margin-top: 2px;
+    margin-bottom: 10px;
+  }
   figcaption {
     color: var(--muted);
     font-size: 0.82rem;
@@ -179,8 +195,9 @@
     structure and tone before writing all of it out. Most sections below are still placeholders —
     short descriptions of what will go there, not final text. A few are drafted in full now
     (marked, not tagged "Outline"): <a href="#numbers">How the Numbers Work</a>,
-    <a href="#tips-slack">Slack Time</a>, <a href="#howto-checkin">Daily Check-In</a>, and
-    <a href="#howto-plan-past">A Past Day</a>. Screenshots are still being selected; a few real ones
+    <a href="#tips-slack">Slack Time</a>, <a href="#howto-checkin">Daily Check-In</a>,
+    <a href="#howto-plan-past">A Past Day</a>, <a href="#tips-rest">Rest Day</a>, and
+    <a href="#howto-setup-rest">Rest Reminder</a>. Screenshots are still being selected; a few real ones
     are wired in below to check that layout works.
   </div>
 
@@ -212,6 +229,7 @@
         <ul>
           <li><a href="#howto-setup-default">Default Day</a></li>
           <li><a href="#howto-setup-modifiers">Day Modifiers</a></li>
+          <li><a href="#howto-setup-rest">Rest Reminder</a></li>
           <li><a href="#howto-setup-backup">Back-Up / Restore</a></li>
         </ul>
       </li>
@@ -367,6 +385,18 @@
   <div class="stub"><span class="tag">Outline</span><p>What it is, how "Load default tasks" works, and that it's a live template — editing a menu item's numbers updates it everywhere, including here.</p></div>
   <h3 id="howto-setup-modifiers">Day Modifiers</h3>
   <div class="stub"><span class="tag">Outline</span><p>Preset and custom modifiers (Wildfire smoke, Heat/no AC, Poor sleep, Illness flare, Noise/sensory overload) and how they discount today's budget.</p></div>
+  <h3 id="howto-setup-rest">Rest Reminder</h3>
+  <div class="drafted">
+    <p>Two numbers here control the days-since-rest indicator on Today: how many days before it
+    turns noticeable, and how many before it turns red and the app actually suggests taking one.</p>
+
+    <p>Both default to a short window on purpose. Rest is easy to keep putting off, and waiting
+    until you're already depleted to be told so isn't much of a reminder.</p>
+  </div>
+  <figure>
+    <img src="4_setup_rest_days.png" alt="Rest reminder fields in Setup">
+    <figcaption>Days without rest — yellow threshold, then red</figcaption>
+  </figure>
   <h3 id="howto-setup-backup">Back-Up / Restore</h3>
   <div class="stub"><span class="tag">Outline</span><p>The three independent categories (Setup, Tasks menu, Days), what backup/restore/wipe do in each, and that everything lives in a plain file you control.</p></div>
   <figure>
@@ -402,7 +432,38 @@
     <figcaption>React / Recreation and MTE, as they actually appear in Default Day — Net +0 by design</figcaption>
   </figure>
   <h3 id="tips-rest">Rest Day</h3>
-  <div class="stub"><span class="tag">Outline</span><p>Declaring a full rest day, and how it's marked in Reports after the fact.</p></div>
+  <div class="drafted">
+    <p>Your Today screen always shows how long it's been since your last Rest day — right in the
+    ledger line, so it's never something you have to go looking for. It changes color as the days
+    add up: green while it's recent, plain text once it's been a while, bold red once resting is
+    overdue.</p>
+  </div>
+  <div class="strip-sequence">
+    <figure>
+      <img src="1_today_rest_reminder_green.png" alt="Last rest 2 days ago, shown in green">
+      <figcaption>Recent — green</figcaption>
+    </figure>
+    <figure>
+      <img src="1_today_rest_reminder_black.png" alt="Last rest 6 days ago, shown in plain text">
+      <figcaption>Getting there — plain text</figcaption>
+    </figure>
+    <figure>
+      <img src="1_today_rest_reminder_red.png" alt="Last rest 14 days ago, shown in bold red">
+      <figcaption>Overdue — bold red</figcaption>
+    </figure>
+  </div>
+  <div class="drafted">
+    <p>Once it hits red, Today also shows a direct prompt — not just a color, but an actual
+    reminder, with a one-tap way to declare the day a Rest day right there.</p>
+  </div>
+  <figure>
+    <img src="1_today_rest_suggestion_banner.png" alt="Rest day suggestion banner with a Declare Rest day button">
+    <figcaption>The prompt that appears once it's been too long</figcaption>
+  </figure>
+  <div class="drafted">
+    <p>Both numbers — when it turns noticeable, and when it turns red — are yours to set, not
+    fixed in the app. See <a href="#howto-setup-rest">Rest Reminder</a> under Setting Up Your App.</p>
+  </div>
 
   <h2 id="howto-privacy">Your Data &amp; Privacy</h2>
   <div class="stub"><span class="tag">Outline</span><p>Short note: no account, nothing leaves your device, your backup is the only copy. Full detail lives in the <a href="/privacy.html">Privacy Policy</a>.</p></div>
