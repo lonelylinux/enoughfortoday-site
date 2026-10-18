@@ -232,6 +232,7 @@
       <li><a href="#howto-tips">Tips &amp; Tricks</a>
         <ul>
           <li><a href="#tips-good-stuff">Good Stuff First</a></li>
+          <li><a href="#tips-log-everything">Log the Ordinary Stuff Too</a></li>
           <li><a href="#tips-mte">MTE (Make Tomorrow Easier)</a></li>
           <li><a href="#howto-setup-default">Default Day</a> (see Setup)</li>
           <li><a href="#tips-categories">Task Categories</a></li>
@@ -256,9 +257,12 @@
     a day can drain one of these a lot more than the others. And because you might tolerate some
     kinds of load differently than others.</p>
 
-    <p>Each morning, you tell the app a few things about how you're doing — like your Body Battery,
-    or how you slept. From that, it works out your <strong>Spendable Budget</strong> for the day:
-    basically, how much you can safely take on.</p>
+    <p>Each morning, you tell the app a few things about how you're doing — your Body Battery and
+    your sleep score, plus heart-rate signals if you track them. Body Battery and sleep score
+    together set your <strong>Spendable Budget</strong> for the day: basically, how much you can
+    safely take on. Anything that trips Back-off — a rough HRV reading, a high overnight heart
+    rate, or flagging that you overdid it yesterday — lowers your pacing percentage, which lowers
+    that budget even on a morning where Body Battery and sleep look fine.</p>
 
     <p>Then, as you log what you actually do, the app keeps a running tally — what you've spent,
     what it's paid back, and what you have left. You don't have to track any of this yourself.
@@ -337,9 +341,9 @@
 
   <h2 id="tour-setup">Tour: Setup</h2>
   <div class="drafted">
-    <p>Setup is also one continuous page. Scale &amp; thresholds and Battery → budget cover the
-    numbers behind your daily budget — battery floor, pacing percentages, and the thresholds that
-    trigger a Back-off day. Rest reminder controls the days-since-rest indicator on Today.</p>
+    <p>Setup is also one continuous page. Scale &amp; thresholds and Battery + sleep → budget cover
+    the numbers behind your daily budget — your pacing percentages and the thresholds that trigger
+    a Back-off day. Rest reminder controls the days-since-rest indicator on Today.</p>
 
     <p>Tap "Show advanced" for heavy-task ceilings and premiums — settings most people won't need
     to touch. Further down: links out to Default Day and to Backup, restore &amp; wipe, four
@@ -349,6 +353,13 @@
     <img src="4_setup_1.png" alt="Setup screen — scale and thresholds, battery to budget">
     <figcaption>Setup — the numbers behind your daily budget</figcaption>
   </figure>
+  <div class="stub">
+    <span class="tag">Screenshot needs updating</span>
+    This screenshot still shows the old "Battery floor" field and the old 75%/50% pacing defaults.
+    The floor field is gone, the defaults are now 55% / 40%, and both pacing fields now load locked
+    behind an "Edit (confirmation required)" step with a warning before you can change them — needs
+    a fresh screenshot once that's retaken.
+  </div>
 
   <!-- ============ PART 2: HOW-TO ============ -->
 
@@ -472,6 +483,15 @@
 
     <p>Whichever mode you're in, the banner always says why — which signal tripped it, not just
     that one did.</p>
+
+    <p>One thing worth knowing about the actual pacing numbers (the standard percentage, and the
+    lower Back-off one): they're not the general "pace yourself at about 70% of what you feel
+    capable of" advice you may have run into elsewhere. These came from this app's own math,
+    checked against real logged days rather than a feeling of effort. They're also personal —
+    what holds up for one person's body won't necessarily hold for another's, so expect to adjust
+    yours as you learn what actually works, and expect the numbers that work for you to rise as
+    your health improves. That's also why Setup makes you confirm before changing either one: it's
+    an easy pair of numbers to nudge without noticing what it actually does to your budget.</p>
   </div>
   <figure>
     <img src="1_today_backoff_1.png" alt="Back-off day banner with reason text">
@@ -554,6 +574,22 @@
 
     <p>Logging the good stuff isn't bookkeeping for its own sake — it's the only way the budget
     math actually knows what's recharging you, not just what's draining you.</p>
+  </div>
+  <h3 id="tips-log-everything">Log the Ordinary Stuff Too</h3>
+  <div class="drafted">
+    <p>It's just as tempting to skip the other direction — not logging a shower, a meal, doing the
+    dishes — because none of it feels like it costs anything on its own. But a daily $6 coffee
+    doesn't feel like real money either, until you add up a month of them: $180, gone, without ever
+    noticing the one purchase that mattered.</p>
+
+    <p>Your body runs the same math on everything you do, whether you write it down or not.
+    Skipping the ordinary stuff doesn't lower what it actually costs you — it just stops the app
+    from seeing it, and stops anyone else reading your reports (a spouse, a doctor, anyone who
+    needs real evidence to believe you) from seeing it too. Logging everything, not just the big
+    obvious things, is what turns a real, cumulative, biological cost from invisible into
+    something you can actually point to. That's true whether you're pacing because you're
+    chronically ill, or because you're the kind of person who's chronically overworking and needs
+    the same evidence to believe your own limits.</p>
   </div>
   <h3 id="tips-mte">MTE (Make Tomorrow Easier)</h3>
   <div class="drafted">
