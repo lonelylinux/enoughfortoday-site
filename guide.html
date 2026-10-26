@@ -197,6 +197,11 @@
     settle. Nothing here is final until that pass is done.
   </div>
 
+  <p>Whether you're stuck in boom-and-bust cycles because of chronic illness or because of
+  hyper-hustle, nobody can pill, supplement, or stimulant their way out of it. We can no more
+  continually overdraw our bodies than our bank accounts — and like the bank, the body charges
+  interest, and the collectors are brutal.</p>
+
   <nav class="toc">
     <h2>Contents</h2>
     <div class="part-label">Part 1 — Tour</div>
@@ -209,34 +214,40 @@
     </ul>
     <div class="part-label">Part 2 — How-To</div>
     <ul>
-      <li><a href="#howto-checkin">Daily Check-In</a></li>
+      <li><a href="#howto-checkin">Daily Check-In</a>
+        <ul>
+          <li><a href="#howto-checkin-status">Day Status</a></li>
+        </ul>
+      </li>
       <li><a href="#howto-plan">Plan Your Day</a>
         <ul>
           <li><a href="#howto-plan-today">Today</a> — Editing Task Details</li>
+          <li><a href="#howto-plan-adjust">Adjusting Your Days</a></li>
           <li><a href="#howto-plan-past">A Past Day</a></li>
           <li><a href="#howto-plan-future">A Future Day</a></li>
         </ul>
       </li>
-      <li><a href="#howto-menu">Managing Your Task Menu</a></li>
-      <li><a href="#howto-intraday">Intraday Budgeting</a> — Deferring / Moving Tasks</li>
-      <li><a href="#howto-daymodes">Understanding Day Modes</a></li>
-      <li><a href="#howto-reports">Reading Your Reports</a></li>
+      <li><a href="#howto-menu">Tasks</a> — Managing Your Task Menu</li>
+      <li><a href="#howto-reports">Reports</a> — Reading Your Reports</li>
       <li><a href="#howto-setup">Setting Up Your App</a>
         <ul>
           <li><a href="#howto-setup-default">Default Day</a></li>
           <li><a href="#howto-setup-modifiers">Day Modifiers</a></li>
           <li><a href="#howto-setup-rest">Rest Reminder</a></li>
           <li><a href="#howto-setup-backup">Back-Up / Restore</a></li>
+          <li><a href="#howto-setup-themes">Appearance Themes</a></li>
         </ul>
       </li>
       <li><a href="#howto-tips">Tips &amp; Tricks</a>
         <ul>
-          <li><a href="#tips-good-stuff">Good Stuff First</a></li>
-          <li><a href="#tips-log-everything">Log the Ordinary Stuff Too</a></li>
+          <li><a href="#tips-naming">Task Naming</a></li>
+          <li><a href="#tips-priorities">Task Priorities</a></li>
+          <li><a href="#tips-domains">Domain Scoring</a></li>
+          <li><a href="#tips-good-stuff">Budget and Log the Good Stuff First</a></li>
+          <li><a href="#tips-log-everything">Log Everything</a></li>
           <li><a href="#tips-mte">MTE (Make Tomorrow Easier)</a></li>
           <li><a href="#howto-setup-default">Default Day</a> (see Setup)</li>
-          <li><a href="#tips-categories">Task Categories</a></li>
-          <li><a href="#tips-slack">Slack Time (React / Recreation)</a></li>
+          <li><a href="#tips-slack">React / Recreation (slack time)</a></li>
           <li><a href="#tips-rest">Rest Day</a></li>
         </ul>
       </li>
@@ -244,7 +255,7 @@
     </ul>
   </nav>
 
-  <!-- ============ PRIMER (drafted in full — style sample) ============ -->
+  <!-- ============ PRIMER ============ -->
   <h2 id="numbers">How the Numbers Work</h2>
   <div class="drafted">
     <p>Think of each day like a battery you wake up with. Enough for Today keeps track of how
@@ -254,7 +265,7 @@
     back</strong>. A nap might cost nothing and pay back a lot. A big work task might cost more
     than it gives. The app tracks this across three kinds of energy —
     <strong>Physical</strong>, <strong>Emotional</strong>, and <strong>Cognitive</strong> — because
-    a day can drain one of these a lot more than the others. And because you might tolerate some
+    a task can drain one of these a lot more than the others, and because you might tolerate some
     kinds of load differently than others.</p>
 
     <p>Each morning, you tell the app a few things about how you're doing — your Body Battery and
@@ -277,8 +288,9 @@
     reflects right now.</p>
 
     <p>At the top, a colored banner shows the day's mode: a green ✓ for Normal, amber ⚠ for
-    Back-off, or 🛌 for Rest. Right below it, a budget box shows your Spendable Budget for the day,
-    what you've used, your payoff so far, and what's left.</p>
+    Back-off, or 🛌 for Rest (colors shown are the default theme — see
+    <a href="#howto-setup-themes">Appearance Themes</a>). Right below it, a budget box shows your
+    Spendable Budget for the day, what you've used, your payoff so far, and what's left.</p>
 
     <p>Tap "Edit this morning's inputs" to open your Body Battery, sleep score, and heart-rate
     fields — the numbers that decide the banner above. Below that: today's modifiers (a discount
@@ -319,24 +331,34 @@
   <div class="drafted">
     <p>Reports is one long page, not a set of tabs — just keep scrolling.</p>
 
-    <p>It opens with Budget adherence: a bar for every day, color-coded by how the day went, with
-    a toggle for Last 7 days / Last 30 days / All time. Below that, Cost by dimension breaks each
-    day's cost into Physical, Emotional, and Cognitive, so you can see which one is actually
-    driving your hardest days. Net trend shows whether days are trending toward recharge or
-    depletion.</p>
+    <p>You can toggle between Last 7 days / Last 30 days / All time. Touch and drag left or right
+    to scroll a chart once there's a lot of days to show.</p>
 
-    <p>Further down: Recovery inputs (Body Battery, sleep score, HRV, lined up so you can spot
-    what a hard day costs you the next morning), a Day Mode calendar for a month-at-a-glance view,
-    and Menu insights — average cost, payoff, and net for every activity you've ever logged, across
-    your whole history.</p>
+    <p>Budget adherence shows a bar for every day, color-coded by how the day went.</p>
 
-    <p>Occasionally, a software update changes how your budget is actually calculated — not your
-    pacing settings, only a real code change, which happens rarely. When that's happened recently,
-    a banner appears right at the top explaining the date it changed and reminding you that an odd
-    jump in the charts below is the math changing, not a shift in your wellness. Tap "Got it" and
-    it won't come back until the next real change. Scroll to the very bottom of Reports anytime for
-    "See all changes" — a permanent, dated list of every one of these, so the record's still there
-    even after you've dismissed the banner.</p>
+    <p>Cost by Domain breaks down each day's costs into Physical, Emotional, and Cognitive, so you
+    can see where your energy is actually going and which domain is driving your hardest days.</p>
+
+    <p>Net trend shows whether days are trending toward recharge or depletion.</p>
+
+    <p>Recovery Inputs chart Body Battery, Sleep Score, and HRV, so you can spot recovery trends
+    and the next-day cost of overdoing it.</p>
+
+    <p>Day Mode calendar gives a month-at-a-glance view for Normal Days, Back-off Days, Rest Days,
+    and indicates days that may have no data. This is another fast visual reference for status
+    and progress.</p>
+
+    <p>Menu Insights shows the average cost, payoff, and net for every activity you log.</p>
+
+    <p>Some graph bars will have a tiny green dot above them. This dot indicates the day was
+    declared as a rest day. Generally, rest days should not be over-budget.</p>
+
+    <p>Occasionally, a software update changes how your budget is calculated. When that's happened
+    recently, a banner appears at the top providing the date it changed and reminding you that an
+    odd jump in the charts reflects the math changing, not a shift in your wellness. Tap "Got it"
+    and it won't come back until the next real change. Scroll to the very bottom of Reports anytime
+    for "See all changes" — a permanent, dated list of every one of these, so the record's still
+    there even after you've dismissed the banner.</p>
   </div>
   <figure>
     <img src="3_reports_1.png" alt="Reports — Budget adherence chart">
@@ -350,16 +372,23 @@
     <img src="3_reports_4.png" alt="Reports — Menu insights list">
     <figcaption>Menu insights — average cost, payoff, and net per activity</figcaption>
   </figure>
+  <div class="stub">
+    <span class="tag">Needs screenshot</span>
+    <p>Day Mode calendar, in the current colors (Normal grey, Back-off yellow, Rest green, no
+    data dark grey, thin border on every cell).</p>
+  </div>
 
   <h2 id="tour-setup">Tour: Setup</h2>
   <div class="drafted">
+    <p>At the top of the Setup tab is a prominent link to this user's guide.</p>
+
     <p>Setup is also one continuous page. Scale &amp; thresholds and Battery + sleep → budget cover
     the numbers behind your daily budget — your pacing percentages and the thresholds that trigger
     a Back-off day. Rest reminder controls the days-since-rest indicator on Today.</p>
 
     <p>Tap "Show advanced" for heavy-task ceilings and premiums — settings most people won't need
-    to touch. Further down: links out to Default Day and to Backup, restore &amp; wipe, four
-    Appearance themes, and a short note that this app isn't medical advice.</p>
+    to touch. Further down: links out to Default Day and to Backup, restore &amp; wipe, Appearance
+    themes, and a short note that this app isn't medical advice.</p>
   </div>
   <figure>
     <img src="4_setup_1.png" alt="Setup screen — scale and thresholds, battery and sleep to budget">
@@ -369,13 +398,17 @@
     <img src="4_setup_change_default_pacing_confirm.png" alt="Confirmation dialog shown before changing a pacing percentage">
     <figcaption>Tap "Edit" on either pacing field and you'll see this first</figcaption>
   </figure>
+  <div class="stub">
+    <span class="tag">Needs screenshot</span>
+    <p>The top of the Setup tab, showing the "📖 Open the User's Guide" link.</p>
+  </div>
 
   <!-- ============ PART 2: HOW-TO ============ -->
 
   <h2 id="howto-checkin">Daily Check-In</h2>
   <div class="drafted">
     <p>Each morning, before anything else, spend a minute on a few simple numbers — your Body
-    Battery, how you slept, maybe your heart rate if you track it. That's it.</p>
+    Battery, how you slept, and heart rate.</p>
 
     <p>No smartwatch? No problem. Leave a field blank and the app just won't use it — it only
     reacts to a field once you've actually filled it in, so an empty box is never mistaken for a
@@ -393,21 +426,62 @@
     <figcaption>This morning's inputs</figcaption>
   </figure>
 
+  <h3 id="howto-checkin-status">Day Status</h3>
+  <div class="drafted">
+    <p>After your morning check-in (Body Battery, sleep score, etc.), the app reports a status for
+    your day — Normal or Back-off — and you can also choose Rest yourself.</p>
+
+    <p><strong>Back-off</strong> kicks in when Body Battery or sleep score comes in low, overnight
+    heart rate or HRV shifts more than usual, or yesterday's spend was greater than your budget.
+    Back-off lowers your pacing percentage, which lowers your budget, and blocks out heavy tasks
+    from the day.</p>
+
+    <p><strong>Rest</strong> status is a commitment to zero heavy tasks, regardless of your budget.
+    If you have an especially low Body Battery, the app will pop up a banner recommending you
+    choose a rest day. Today's ledger will also show you how many days it's been since you declared
+    a rest day.</p>
+
+    <p>The status of your day appears in the banner, along with the reason for it — a low Body
+    Battery or poor Sleep Score, for example.</p>
+
+    <p>The Pacing and Back-off levels calculated by this app begin with default values based on
+    testing by a small group of actual patients. Those values may be either too restrictive or too
+    permissive for you, so you can adjust them in the <a href="#howto-setup">Setup tab</a>. We
+    recommend you test the system for a week or two before making changes.</p>
+  </div>
+  <figure>
+    <img src="1_today_backoff_1.png" alt="Back-off day banner with reason text">
+    <figcaption>Back-off day — the banner always names the reason</figcaption>
+  </figure>
+
   <h2 id="howto-plan">Plan Your Day</h2>
   <h3 id="howto-plan-today">Today</h3>
   <div class="drafted">
     <p>Tap "+ Add Task" to pick something from your menu and drop it into today's ledger. Once
-    it's there, it's a snapshot — its own copy of that activity's cost and payoff, not a live link
-    back to the menu.</p>
-
-    <p>That matters because it means you can edit a logged task's priority or add a note for today
-    specifically ("Edit details" on its card) without changing the menu item it came from — and
-    editing the menu item later never rewrites what you already logged.</p>
+    it's there, it's a snapshot copy of that activity's cost and payoff. You can edit today's copy
+    to add a note, or change the priority, cost, and payoff for that day's event, without altering
+    the version stored in your Tasks menu.</p>
   </div>
   <figure>
     <img src="2_tasks_adding_today_1.png" alt="Adding a task to today from the menu">
     <figcaption>Adding to today, straight from the menu</figcaption>
   </figure>
+
+  <h3 id="howto-plan-adjust">Adjusting Your Days</h3>
+  <div class="drafted">
+    <p>It's normal for plans to change during the day. Every card in today's ledger has Edit
+    details, Remove, and two more buttons: −1 Day and +1 Day. You can remove a task, edit its cost
+    and payoff details, or move it to yesterday or tomorrow without retyping it — on any day you're
+    viewing, not just today.</p>
+
+    <p>If you're running over budget, or just feel worse than you did this morning, moving
+    something to tomorrow is usually better than pushing through.</p>
+  </div>
+  <figure>
+    <img src="1_today_next.png" alt="Ledger card showing -1 Day, Edit details, Remove, +1 Day buttons">
+    <figcaption>Every card: −1 Day, Edit details, Remove, +1 Day</figcaption>
+  </figure>
+
   <h3 id="howto-plan-past">A Past Day</h3>
   <div class="drafted">
     <p>Tap the left arrow, or the date in the middle, to look at an earlier day. Everything you
@@ -417,40 +491,55 @@
     Battery and sleep score, and the app works out what Day Mode and budget the day would have had
     — so it shows up correctly in Reports, same as any other day.</p>
 
-    <p><strong>Past-day edits don't save themselves.</strong> You'll see a
-    preview of what the day would compute to, and a "Save check-in" button underneath — nothing is
-    written until you tap it. Today is the one exception: today's own inputs always save the moment
-    you change them, and switching to look at another day never loses what you just entered.</p>
+    <p>Today's schedule, and any future days, always save the moment you change them — switching to
+    look at another day never loses what you just entered. Past-day edits are different: to protect
+    against mistaken changes, they must be saved on purpose, and the edit screen will prompt you to
+    do it.</p>
   </div>
   <figure>
     <img src="1_today_save_checkin.webp" alt="Save check-in button on a past day">
     <figcaption>Past-day edits stay a preview until you tap "Save check-in"</figcaption>
   </figure>
+
   <h3 id="howto-plan-future">A Future Day</h3>
   <div class="drafted">
     <p>The right arrow — or the calendar — takes you forward as easily as back. A future day's
-    ledger is real and saved, so you can stage tasks ahead of time: block out Thursday's plan on
-    Monday, if that's useful to you.</p>
+    ledger lets you stage tasks ahead of time: block out Thursday's plan on Monday, including the
+    low-cost/high-payoff items you want to make sure land there.</p>
 
-    <p>One thing to know: Today's banner and budget always reflect today's live inputs, not
-    whatever day you're looking at. A future day doesn't have a Day Mode yet, because it doesn't
-    have a morning check-in yet — that only happens once the day actually arrives.</p>
+    <p>Future days don't have a status or budget, because they don't have a morning check-in yet to
+    gather Body Battery, sleep score, and the rest.</p>
   </div>
   <figure>
     <img src="1_today_add_task_tomorrow.png" alt="Viewing a future day's ledger">
     <figcaption>A future day — real, saved, and ready to plan into</figcaption>
   </figure>
 
-  <h2 id="howto-menu">Managing Your Task Menu</h2>
+  <h2 id="howto-menu">Tasks</h2>
   <div class="drafted">
-    <p>Everything in your menu — Cooking: Breakfast, Exercise: Easy Walk, whatever you've built up
-    — lives on the Tasks tab, and you manage it from there, separately from logging any particular
-    day.</p>
+    <p>The Tasks tab contains your personal menu of tasks and activities that repeat, along with
+    their typical costs and payoffs. This lets you plan your days without rebuilding each one from
+    scratch.</p>
 
-    <p>Edit opens the same name/priority/six-number form you'd use to create something new. Delete
-    asks you to confirm, and is honest about what it does: it removes the item from your menu
-    going forward, but any day you already logged with it keeps its own saved copy — deleting a
-    menu item never rewrites history.</p>
+    <p>This menu has a couple of special display features.</p>
+
+    <p><strong>Grayed-out items:</strong> when adding tasks to today, an item may display
+    grayed-out if it would put you over budget for today, if it would exceed your heavy-task limit
+    for today, or if you've selected today as a rest day and the item isn't zero-cost. You can
+    still add a grayed-out item — the app is just warning you, not stopping you. This only applies
+    when you're adding to today: planning a future day never grays anything out, since that day's
+    budget hasn't been calculated yet.</p>
+
+    <p><strong>Green-left-margin items:</strong> if an item has low cost and high payoff, it's
+    shown with a green left margin to highlight it. Whether you're using the app to manage chronic
+    illness or to prevent burnout, it's worth prioritizing these in your daily budgeting, and
+    having at least a few of them in every day.</p>
+
+    <p>When you add a new task, you give it a name, a priority, and the physical, emotional, and
+    cognitive cost and payoff for that task. See <a href="#howto-tips">Tips &amp; Tricks</a> for
+    ways to get the most from naming and scoring. Edit opens the same name/priority/six-number form
+    you'd use to create something new. Delete asks you to confirm, and removes the item from your
+    menu going forward — any day you already logged with it keeps its own saved copy regardless.</p>
   </div>
   <figure>
     <img src="2_tasks_edit_item.png" alt="Editing a menu item's name, priority, and numbers">
@@ -460,192 +549,233 @@
     <img src="2_tasks_delete.png" alt="Delete confirmation dialog for a menu item">
     <figcaption>Deleting asks first, and says exactly what it does</figcaption>
   </figure>
-
-  <h2 id="howto-intraday">Intraday Budgeting</h2>
-  <div class="drafted">
-    <p>Plans change mid-day — that's normal, not a failure. Every card in today's ledger has Edit
-    details, Remove, and two more buttons: −1 Day and +1 Day, to move that task to yesterday or
-    tomorrow without retyping it.</p>
-
-    <p>If you're running over budget, or just feel worse than you did this morning, moving
-    something to tomorrow is usually the better call than pushing through. The app doesn't judge
-    either way — it just keeps the math honest about whatever you actually decide.</p>
+  <div class="stub">
+    <span class="tag">Needs screenshot</span>
+    <p>A grayed-out item on the Tasks tab, with its reason text visible (over-budget, heavy-task
+    limit, or rest day).</p>
   </div>
-  <figure>
-    <img src="1_today_next.png" alt="Ledger card showing -1 Day, Edit details, Remove, +1 Day buttons">
-    <figcaption>Every card: −1 Day, Edit details, Remove, +1 Day</figcaption>
-  </figure>
 
-  <h2 id="howto-daymodes">Understanding Day Modes</h2>
+  <h2 id="howto-reports">Reports</h2>
   <div class="drafted">
-    <p>Three modes, and the app picks one for you every morning based on what you enter: Normal,
-    Back-off, or Rest.</p>
+    <p>The Reports tab gives you the power of data — finding things that worked, things that
+    didn't, and the wisdom of trends.</p>
 
-    <p><strong>Back-off</strong> kicks in when Body Battery or sleep score comes in low, your
-    overnight heart rate or HRV shifts more than usual, or you flagged overdoing it the day before
-    — any one of these is enough on its own. It lowers your pacing percentage, which lowers your
-    budget, and blocks heavy tasks for the day.</p>
+    <p>Budget adherence shows how well your activities are matching your resources: bar height
+    reflects your daily spend. Green ones were "in budget" days; red ones are "over budget" days
+    (exact colors depend on your theme — see <a href="#howto-setup-themes">Appearance
+    Themes</a>).</p>
 
-    <p><strong>Rest</strong> is stronger still: zero heavy tasks, regardless of budget. It happens
-    two ways — you can choose it yourself anytime, or the app declares it for you if your Body
-    Battery falls below your hard-rest floor, a lower line than Back-off's own threshold.</p>
+    <p>Cost by Domain shows the balance of loads in your days by domain: Physical, Emotional,
+    Cognitive. Most people are more aware of Physical loads, less aware of Emotional, and even less
+    aware of Cognitive — this chart raises that awareness, so you can manage your energy and
+    organize your days accordingly.</p>
 
-    <p>Whichever mode you're in, the banner always says why — which signal tripped it, not just
-    that one did.</p>
+    <p>Net Trend shows the payoff minus cost you've defined for your tasks, tallied by day. This
+    can help you plan future days so your low-cost/high-payoff tasks are balancing out the ones
+    with higher costs and lower payoffs.</p>
 
-    <p>One thing worth knowing about the actual pacing numbers (the standard percentage, and the
-    lower Back-off one): they're not the general "pace yourself at about 70% of what you feel
-    capable of" advice you may have run into elsewhere. These came from this app's own math,
-    checked against real logged days rather than a feeling of effort. They're also personal —
-    what holds up for one person's body won't necessarily hold for another's, so expect to adjust
-    yours as you learn what actually works, and expect the numbers that work for you to rise as
-    your health improves. That's also why Setup makes you confirm before changing either one: it's
-    an easy pair of numbers to nudge without noticing what it actually does to your budget.</p>
-  </div>
-  <figure>
-    <img src="1_today_backoff_1.png" alt="Back-off day banner with reason text">
-    <figcaption>Back-off day — the banner always names the reason</figcaption>
-  </figure>
-
-  <h2 id="howto-reports">Reading Your Reports</h2>
-  <div class="drafted">
-    <p>Reports is where patterns show up that a single day never will (see the <a href="#tour-reports">Reports tour</a> above for what each chart looks like).</p>
-
-    <p>A string of red bars in Budget adherence means something about your current pacing isn't
-    matching reality — worth a look at your Setup thresholds. Cost by dimension can point at which
-    kind of task is actually behind your hard days; it's not always the one you'd guess.</p>
-
-    <p>And Menu insights, near the bottom, will quietly tell you which activities are consistently
-    worth their cost (a positive average net) and which rarely are. Sometimes the honest answer to
-    "should I keep doing this" is sitting right there in the numbers.</p>
+    <p>Menu insights tells you which activities you're doing consistently, and how their net cost
+    is showing up — useful for deciding how to schedule items to balance your load, or for spotting
+    which ones you might want to find a way to lay down.</p>
   </div>
 
   <h2 id="howto-setup">Setting Up Your App</h2>
   <h3 id="howto-setup-default">Default Day</h3>
   <div class="drafted">
-    <p>Default Day is a list, not a date — it's what "Load default tasks" adds to whatever day
-    you're on, without ever touching what's already there.</p>
+    <p>Default Day is a list of Tasks from a typical day — things like "Make Breakfast" and
+    "Breath-work." Then, with a single click, "Load Default Tasks" inserts them all into the day
+    you're editing (Today or a future day). If a task is already listed that day, this won't
+    overwrite or duplicate it.</p>
 
-    <p>Its items aren't their own separate thing: cost and payoff always come live from your Tasks
-    menu, so editing a menu item updates Default Day automatically. There's nothing to keep in
-    sync by hand.</p>
+    <p>Set up or edit your Default Day by adding and ordering tasks the way you would for any day,
+    then save it. When you "Load Default Tasks" into an actual day, the Cost and Payoff come live
+    from your Tasks menu — so editing an item in Tasks never requires any changes to your Default
+    Day.</p>
   </div>
   <figure>
     <img src="4_setup_default_day.png" alt="Default Day list of tasks">
     <figcaption>Default Day — numbers always read live from the Tasks menu</figcaption>
   </figure>
+
   <h3 id="howto-setup-modifiers">Day Modifiers</h3>
   <div class="drafted">
-    <p>Modifiers are a quick, honest discount on today's budget for a day that's already working
-    against you — wildfire smoke, a heat wave with no AC, a rough night's sleep, a flare, too much
-    noise. Pick a preset, or type your own label and percentage.</p>
-
-    <p>They stack, up to 100%, and they only ever reduce your budget for one day — nothing here is
-    permanent.</p>
+    <p>Modifiers are a quick way to account for things that aren't Tasks but still work against
+    your budget and well-being — wildfire smoke, a heat wave with no AC, a stressful social
+    interaction, anything that impairs your function. Edit the list to include anything that drains
+    you, then use it to apply an instant discount to your budget and help head off a crash.</p>
   </div>
   <figure>
     <img src="1_today_inputs_modifiers.png" alt="Modifier presets list with percentages">
     <figcaption>Modifier presets — or add your own</figcaption>
   </figure>
+
   <h3 id="howto-setup-rest">Rest Reminder</h3>
   <div class="drafted">
-    <p>Two numbers here control the days-since-rest indicator on Today: how many days before it
-    turns noticeable, and how many before it turns red and the app actually suggests taking one.</p>
+    <p>The thing commonly neglected by people struggling with chronic illness — or by those living
+    in hyper-hustle — is rest. The "need to do things" keeps bumping real rest until "later," where
+    it gets bumped again.</p>
 
-    <p>Both default to a short window on purpose. Rest is easy to keep putting off, and waiting
-    until you're already depleted to be told so isn't much of a reminder.</p>
+    <p>Enough for Today has Rest reminders built in. Every day, the ledger tells you how many days
+    it's been since your last declared, intentional rest day. If you've rested recently, that
+    number shows in green; once it's been more days than you've set, it turns to plain text; and
+    once it passes your second number, it turns red — you'll also get a pop-up suggesting a rest
+    day, once a day, until you reset the counter by actually taking one. (Exact colors follow your
+    chosen theme — see <a href="#howto-setup-themes">Appearance Themes</a>.) Both numbers default
+    to a short window on purpose: rest is easy to keep putting off, and waiting until a crash forces
+    you into one — or more than one — isn't much of a reminder.</p>
   </div>
   <figure>
     <img src="4_setup_rest_days.png" alt="Rest reminder fields in Setup">
     <figcaption>Days without rest — yellow threshold, then red</figcaption>
   </figure>
+
   <h3 id="howto-setup-backup">Back-Up / Restore</h3>
   <div class="drafted">
-    <p>Setup, Tasks menu, and Days back up and restore completely separately — so you can, say,
-    restore your Setup thresholds from an old backup without touching a single day you've logged
-    since.</p>
+    <p>Setup, Tasks menu, and your Days ledgers all back up and restore separately. This lets you
+    restore your Setup thresholds from an old backup without touching a single day you've
+    logged.</p>
 
-    <p>Each backup is a plain file you choose where to put: Google Drive, email, your computer,
-    wherever. Restoring a category replaces its current data entirely — there's no partial merge —
-    so keep in mind that's not undoable unless you've got another backup to fall back on.</p>
+    <p>Each backup is a .json file, readable by other software. If you're a fellow tech nerd, you
+    can import a backup file to manipulate or analyze in a spreadsheet, database, or using AI, if
+    you choose.</p>
+
+    <p>You're in complete control of your backup storage. It begins by saving to your phone; you
+    can then move the file to Google Drive, email, your computer, or wherever you like. Note that
+    backup files are unencrypted, so manage their storage and transmission accordingly. Restoring a
+    category replaces its current data entirely — there's no partial merge and no undo, so be
+    careful.</p>
   </div>
   <figure>
     <img src="4_setup_backup_restore.png" alt="Backup, restore and wipe screen">
     <figcaption>Backup, restore &amp; wipe — three independent categories</figcaption>
   </figure>
 
+  <h3 id="howto-setup-themes">Appearance Themes</h3>
+  <div class="drafted">
+    <p>Enough for Today lets you customize its appearance with different color themes, including a
+    dedicated Color-safe theme built for colorblind readers. (A couple of decorative "sponsor"
+    themes are planned for later, once that part of the app is built — not available yet.)</p>
+
+    <p>Colors mentioned elsewhere in this guide — the green/amber/red used for budget status, the
+    rest-day counter, and so on — reflect whichever theme you've picked, and specifically the
+    default Calm theme. Pick Color-safe instead and the same meanings hold, but the actual colors
+    shift (blue and orange in place of red and green) so they stay distinguishable if you're
+    colorblind.</p>
+  </div>
+  <div class="stub">
+    <span class="tag">Needs screenshot</span>
+    <p>Setup's theme picker.</p>
+  </div>
+
   <h2 id="howto-tips">Tips &amp; Tricks</h2>
-  <h3 id="tips-good-stuff">Good Stuff First</h3>
-  <div class="drafted">
-    <p>It's tempting to only log the things that cost you — the hard stuff, the obligations. But a
-    nap, a walk, time with a friend: these have a real Cost and Payoff too, and the app can't
-    credit them if they're never logged.</p>
 
-    <p>Logging the good stuff isn't bookkeeping for its own sake — it's the only way the budget
-    math actually knows what's recharging you, not just what's draining you.</p>
-  </div>
-  <h3 id="tips-log-everything">Log the Ordinary Stuff Too</h3>
+  <h3 id="tips-naming">Task Naming</h3>
   <div class="drafted">
-    <p>It's just as tempting to skip the other direction — not logging a shower, a meal, doing the
-    dishes — because none of it feels like it costs anything on its own. But a daily $6 coffee
-    doesn't feel like real money either, until you add up a month of them: $180, gone, without ever
-    noticing the one purchase that mattered.</p>
-
-    <p>Your body runs the same math on everything you do, whether you write it down or not.
-    Skipping the ordinary stuff doesn't lower what it actually costs you — it just stops the app
-    from seeing it, and stops anyone else reading your reports (a spouse, a doctor, anyone who
-    needs real evidence to believe you) from seeing it too. Logging everything, not just the big
-    obvious things, is what turns a real, cumulative, biological cost from invisible into
-    something you can actually point to. That's true whether you're pacing because you're
-    chronically ill, or because you're the kind of person who's chronically overworking and needs
-    the same evidence to believe your own limits.</p>
+    <p>The Tasks tab has sorting buttons, and creative naming can put the "sort by name" option to
+    real use. Leading numbers like <code>0_taskname</code>, <code>1_taskname</code> force tasks to
+    sort in whatever order you choose. Try categories, too — something like "WORK" with
+    subcategories like "bookkeeping" and "shipping," so an item reads "WORK: bookkeeping." That
+    lets you scroll straight to the category and pick the specific item you want to add.</p>
   </div>
+
+  <h3 id="tips-priorities">Task Priorities</h3>
+  <div class="drafted">
+    <p>Tasks can be given High, Medium, or Low priority status, and a single tap in your Tasks menu
+    sorts them accordingly. A High-priority task can still be cheap, and a Low-priority one can
+    still wipe you out.</p>
+  </div>
+
+  <h3 id="tips-domains">Domain Scoring</h3>
+  <div class="drafted">
+    <p>Any activity can be demanding in some ways but not others. Just the process of listing the
+    demands and payoffs by domain can raise your awareness of what something actually costs, which
+    can help you learn to prevent crashes and burnout — and your notes and scores, tracked over
+    time, can be genuinely useful in conversations with family or health professionals. Take your
+    time and be thoughtful when you first set up a task, and remember to edit that day's copy
+    whenever the actual demands or payoffs differ from the menu item.</p>
+
+    <p>The real cost of a task often changes over time, too. If a chronic condition is improving,
+    showering may genuinely cost less than it used to — that's progress, and worth updating in your
+    menu item. If a task is getting harder, account for that as well, and use what you're seeing to
+    help navigate your recovery.</p>
+  </div>
+
+  <h3 id="tips-good-stuff">Budget and Log the Good Stuff First</h3>
+  <div class="drafted">
+    <p>The things we choose to recognize and record reflect — and also shape — our priorities.
+    When we're hustling, or degraded by illness, we tend to narrow our focus to "the essentials,"
+    and lose sight of the very things that restore and recharge us, right when those things matter
+    most.</p>
+
+    <p>A nap, a walk, playing music, time with a friend — these have a real cost and payoff too,
+    and the app needs to see them to calculate your balance. You need them even more, to rebuild
+    balance if you're ill or living in boom-and-bust cycles.</p>
+
+    <p>Logging the good stuff isn't bookkeeping for its own sake — it's the only way to fully
+    reveal where your recharges are actually coming from. In your Tasks tab, items with a low
+    overall cost and a high overall payoff get flagged with a green left margin; when you plan your
+    days, put these in first and prioritize them. It's also the path back to motivation and joy —
+    it helps morale if you're chronically ill, and prevents burnout if you're chronically
+    overworking.</p>
+  </div>
+
+  <h3 id="tips-log-everything">Log Everything</h3>
+  <div class="drafted">
+    <p>It's tempting to skip logging the mundane stuff — a shower, a meal, doing the dishes —
+    because none of it feels like it costs anything on its own. But your body runs the same math on
+    everything, logged or not.</p>
+
+    <p>Logging everything counters the "Starbucks Effect": a daily $6 coffee doesn't feel like real
+    money, until you add up a month of them and see $180 gone.</p>
+
+    <p>Each activity matters the way each coffee matters, in the big picture. Skipping the log
+    entry doesn't lower what something actually costs you — it just keeps that cost hidden. Logging
+    everything, not just the obvious big things, is what turns a real, cumulative, biological cost
+    from invisible into something you can actually see — and, if it helps, show to a spouse or a
+    doctor.</p>
+  </div>
+
   <h3 id="tips-mte">MTE (Make Tomorrow Easier)</h3>
   <div class="drafted">
-    <p>Make Tomorrow Easier: one small thing a day that moves your actual situation forward,
-    instead of just reacting to whatever's loudest. Decluttering a workspace, ordering a part
-    you'll need, writing a guide you've been putting off — size doesn't matter, direction does.</p>
+    <p>MTE is a personal-effectiveness strategy that ensures forward progress, even when you're ill
+    or chronically overwhelmed. It's one small thing in your day that moves your actual situation
+    forward, instead of just reacting to whatever's loudest — decluttering a workspace, ordering a
+    part you'll need, jotting down a few notes, writing a guide you've been putting off. Size
+    doesn't matter; direction does.</p>
 
-    <p>It's hard to prioritize on purpose, especially if you're chronically ill, a solopreneur, or
-    just wired to always be reacting — doubly hard if you're all three. MTE is already a fixture
-    in Default Day for exactly that reason, so it's on your list without you having to remember to
-    add it.</p>
+    <p>MTE is already a default item on the Tasks menu and in Default Day for exactly this reason,
+    so it's on your list without you having to remember to add it. Edit its note and its
+    cost/payoff scores for that specific day. Many people like to do theirs early, right after a
+    bit of self-care, while they're fresh — that way you bank a small win early, even on a day when
+    it's all you get.</p>
   </div>
-  <h3 id="tips-categories">Task Categories</h3>
+
+  <h3 id="tips-slack">React / Recreation (slack time)</h3>
   <div class="drafted">
-    <p>Every task carries two kinds of description: a Priority (High, Medium, or Low) and a
-    cost/payoff pair across three dimensions — Physical, Emotional, Cognitive.</p>
+    <p>Life interrupts — things break, people call on you, something urgent jumps the queue. If you
+    haven't planned for it, it gets paid for by borrowing from somewhere else in your day, usually
+    the things that recharge you. Keep a full schedule and these things will wreck it and spike
+    your stress. My friend Charlie used to say his "workout got stolen."</p>
 
-    <p>Priority is about importance; the dimensions are about what kind of toll something takes.
-    A High-priority task can still be cheap, and a Low-priority one can still wipe you out — the
-    two aren't the same axis, and the app tracks them separately on purpose.</p>
-  </div>
-  <h3 id="tips-slack">Slack Time (React / Recreation)</h3>
-  <div class="drafted">
-    <p>Life interrupts. A phone call, a crisis, a last-minute ask — these things don't wait for a
-    good time. If you haven't planned for them, they get paid for by borrowing from somewhere else
-    in your day — usually rest.</p>
+    <p>That's what React / Recreation is for. In your Default Day, there's a task by that name,
+    with its cost and payoff numbers set to hold space in your budget on purpose.</p>
 
-    <p>That's what Slack Time is for. In your Default Day, there's a task called
-    <strong>React / Recreation</strong>. It has a real cost and a real payoff — both set to 9 — so
-    it holds space in your budget on purpose, without actually costing you anything net.</p>
-
-    <p>Here's the clever part: if something unplanned comes up, you edit that entry to say what
-    really happened, and jot a note about it. If nothing comes up? That time is just yours —
-    recreation, already budgeted for, no guilt required.</p>
-
-    <p>Either way, the rest of your day stays protected.</p>
+    <p>If something unplanned comes up, edit that entry's note to say what actually happened, and
+    adjust the scores to match. If nothing comes up, edit the note to say what you spent the time
+    on instead — a phone call, some self-care, actual recreation. Either way, the rest of your day
+    stays protected, and so does your stress level.</p>
   </div>
   <figure>
     <img src="4_setup_default_day.png" alt="Default Day list showing React / Recreation and MTE entries">
-    <figcaption>React / Recreation and MTE, as they actually appear in Default Day — Net +0 by design</figcaption>
+    <figcaption>React / Recreation and MTE, as they actually appear in Default Day</figcaption>
   </figure>
+
   <h3 id="tips-rest">Rest Day</h3>
   <div class="drafted">
-    <p>Your Today screen always shows how long it's been since your last Rest day — right in the
-    ledger line, so it's never something you have to go looking for. It changes color as the days
-    add up: green while it's recent, plain text once it's been a while, bold red once resting is
-    overdue.</p>
+    <p>Your Today screen always shows, right in the ledger line, how long it's been since your last
+    Rest day. It changes color as the days add up: green while it's recent, plain text once it's
+    been a while, bold red once resting is overdue (exact colors follow your theme — see
+    <a href="#howto-setup-themes">Appearance Themes</a>).</p>
   </div>
   <div class="strip-sequence">
     <figure>
@@ -662,23 +792,21 @@
     </figure>
   </div>
   <div class="drafted">
-    <p>Once it hits red, Today also shows a direct prompt — not just a color, but an actual
-    reminder, with a one-tap way to declare the day a Rest day right there.</p>
+    <p>Once it hits red, Today also shows a prompt reminding you to take a rest day. Whether you're
+    pacing an illness or trying not to burn out, heeding that prompt can genuinely matter. Both
+    numbers — when it turns noticeable, and when it turns red — are yours to set; see
+    <a href="#howto-setup-rest">Rest Reminder</a> under Setting Up Your App.</p>
   </div>
   <figure>
     <img src="1_today_rest_suggestion_banner.png" alt="Rest day suggestion banner with a Declare Rest day button">
     <figcaption>The prompt that appears once it's been too long</figcaption>
   </figure>
-  <div class="drafted">
-    <p>Both numbers — when it turns noticeable, and when it turns red — are yours to set, not
-    fixed in the app. See <a href="#howto-setup-rest">Rest Reminder</a> under Setting Up Your App.</p>
-  </div>
 
   <h2 id="howto-privacy">Your Data &amp; Privacy</h2>
   <div class="drafted">
-    <p>No account, no server, nothing leaves your device unless you choose to send it somewhere —
-    a backup file you create and control. If you ever wipe your data, that's genuinely it; there's
-    no copy sitting anywhere else to worry about.</p>
+    <p>No account to sign up for, no server to log in to, no data ever leaves your device unless
+    you choose to send it somewhere. If you ever wipe your data, that's genuinely it — there's no
+    copy sitting anywhere else to worry about.</p>
 
     <p>Full detail: <a href="/privacy.html">Privacy Policy</a>.</p>
   </div>
